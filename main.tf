@@ -32,7 +32,7 @@ resource "azurerm_resource_group" "rg" {
   }
 }
 
-resource "azurerm_resource_group" "rg" {
+resource "azurerm_resource_group" "rg1" {
   name     = "prod-rg"
   location = var.location
 
