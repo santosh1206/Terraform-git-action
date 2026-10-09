@@ -12,9 +12,9 @@ terraform {
     resource_group_name  = "rg-tfstate"
     storage_account_name = "tfstatefiledmo"
     container_name       = "tfstate"
-    key                  = "rg.terraform.tfstate"
+    key                  = "terraform.tfstate"
     use_oidc             = true
-   }
+  }
 }
 
 provider "azurerm" {
