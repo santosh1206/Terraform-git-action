@@ -6,7 +6,7 @@ terraform {
       version = "~> 3.0"
     }
   }
-
+/*
   # For production, configure an Azure Storage backend here:
   backend "azurerm" {
      resource_group_name  = "rg-tfstate"
@@ -14,7 +14,7 @@ terraform {
      container_name       = "tfstate"
      key                  = "terraform.tfstate"
      use_oidc             = true
-   }
+   } */
 }
 
 provider "azurerm" {
