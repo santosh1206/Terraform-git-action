@@ -31,3 +31,13 @@ resource "azurerm_resource_group" "rg" {
     ManagedBy   = "Terraform"
   }
 }
+
+resource "azurerm_resource_group" "rg" {
+  name     = "prod-rg"
+  location = var.location
+
+  tags = {
+    Environment = "prod"
+    ManagedBy   = "Terraform"
+  }
+}
