@@ -23,7 +23,7 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "rg" {
-  name     = var.resource_group_name
+  name     = "demo-action-rg"
   location = var.location
 
   tags = {
@@ -33,7 +33,7 @@ resource "azurerm_resource_group" "rg" {
 }
 
 resource "azurerm_resource_group" "rg1" {
-  name     = "prod-rg"
+  name     = "demo-action-rg"
   location = var.location
 
   tags = {
