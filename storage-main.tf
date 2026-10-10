@@ -2,7 +2,7 @@
 resource "azurerm_resource_group" "storage_rg" {
   for_each = var.storage_deployments
 
-  name     = each.value.storage_rg_name
+  name     = each.value.rg_name
   location = each.value.region_name
 }
 
