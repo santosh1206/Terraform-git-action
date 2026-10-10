@@ -1,7 +1,7 @@
 storage_deployments = {
   "deployment-01" = {
     rg_name                 = "rg-data-eastus-01"
-    storage_account_name    = "stdataeastus001"
+    storage_account_name    = "demostdataeastus01"
     region_name             = "eastus"
     disable_public_access   = false
     enable_private_endpoint = false
@@ -9,7 +9,7 @@ storage_deployments = {
   },
   "deployment-02" = {
     rg_name                 = "rg-logs-eastus2-02"
-    storage_account_name    = "stlogseastus2002"
+    storage_account_name    = "demostlogseastus02"
     region_name             = "eastus2"
     disable_public_access   = false
     enable_private_endpoint = false
@@ -17,7 +17,7 @@ storage_deployments = {
   },
   "deployment-03" = {
     rg_name                 = "rg-shared-centralus-03"
-    storage_account_name    = "stsharedcentralus003"
+    storage_account_name    = "demostsharedcentralus03"
     region_name             = "centralus"
     disable_public_access   = false
     enable_private_endpoint = false
