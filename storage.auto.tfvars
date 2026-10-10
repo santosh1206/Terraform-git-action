@@ -3,8 +3,8 @@ storage_deployments = {
     rg_name                 = "rg-data-eastus-01"
     storage_account_name    = "stdataeastus001"
     region_name             = "eastus"
-    disable_public_access   = true
-    enable_private_endpoint = true
+    disable_public_access   = false
+    enable_private_endpoint = false
     subnet_id               = null
   },
   "deployment-02" = {
