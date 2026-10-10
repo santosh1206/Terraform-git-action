@@ -41,3 +41,13 @@ resource "azurerm_resource_group" "rg1" {
     ManagedBy   = "Terraform"
   }
 }
+
+resource "azurerm_resource_group" "rg2" {
+  name     = "demo-action-rg2"
+  location = var.location
+
+  tags = {
+    Environment = "test"
+    ManagedBy   = "Terraform"
+  }
+}
