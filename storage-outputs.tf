@@ -5,6 +5,11 @@ output "storage_account_ids" {
   }
 }
 
+output "storage_account_ids_list" {
+  description = "List of storage account IDs"
+  value       = [for sa in azurerm_storage_account.sa : sa.id]
+}
+
 output "private_endpoint_ips" {
   description = "Private IPs assigned to the private endpoints (if enabled)."
   value = {
