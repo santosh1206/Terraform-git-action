@@ -5,8 +5,6 @@ storage_deployments = {
     region_name             = "eastus"
     disable_public_access   = true
     enable_private_endpoint = true
-    # Provide your existing subnet ID where the private endpoint should attach
-    #subnet_id               = azurerm_subnet.pe_subnet.id
     subnet_id               = null
   },
   "deployment-02" = {
