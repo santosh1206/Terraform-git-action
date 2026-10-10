@@ -43,7 +43,7 @@ resource "azurerm_resource_group" "rg1" {
 }
 
 resource "azurerm_resource_group" "rg3" {
-  name     = "demo-action-rg2"
+  name     = "demo-action-rg3"
   location = var.location
 
   tags = {
