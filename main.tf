@@ -42,7 +42,7 @@ resource "azurerm_resource_group" "rg1" {
   }
 }
 
-resource "azurerm_resource_group" "rg2" {
+resource "azurerm_resource_group" "rg3" {
   name     = "demo-action-rg2"
   location = var.location
 
