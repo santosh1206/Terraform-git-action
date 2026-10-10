@@ -1,18 +1,13 @@
 terraform {
   required_version = ">= 1.5.0"
+
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
       version = "~> 3.0"
     }
   }
-}
 
-provider "azurerm" {
-  features {}
-}
-
-# For production, configure an Azure Storage backend here:
   backend "azurerm" {
     resource_group_name  = "rg-tfstate"
     storage_account_name = "tfstatefiledmo"
@@ -20,3 +15,8 @@ provider "azurerm" {
     key                  = "terraform.tfstate"
     use_oidc             = true
   }
+}
+
+provider "azurerm" {
+  features {}
+}
