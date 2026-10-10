@@ -13,7 +13,7 @@ storage_deployments = {
     rg_name                 = "rg-logs-eastus2-02"
     storage_account_name    = "stlogseastus2002"
     region_name             = "eastus2"
-    disable_public_access   = true
+    disable_public_access   = false
     enable_private_endpoint = false
     subnet_id               = null
   },
