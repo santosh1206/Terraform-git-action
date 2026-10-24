@@ -16,19 +16,17 @@ public_ip_name              = "pip-workload-vm-01"
 public_ip_allocation_method = "Static"
 public_ip_sku               = "Standard"
 nsg_name                    = "nsg-workload-vm-01"
-ssh_source_address_prefix   = "YOUR_LOCAL_IP_OR_CIDR" # e.g. "203.0.113.25/32" or "*"
+ssh_source_address_prefix   = "*" # Change to your actual IP in CIDR format (e.g., "198.51.100.4/32") for production security
 
 # Network Interface
 nic_name           = "nic-workload-vm-01"
 nic_ip_config_name = "ipconfig-primary"
 
 # Linux VM Configuration
-vm_name              = "vm-ubuntu-prod-01"
-vm_size              = "Standard_B2s"
-admin_username       = "azureuser"
-admin_password       = "Demopass@2026"
-#admin_ssh_public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC..." # Replace with your public key
-
+vm_name         = "vm-ubuntu-prod-01"
+vm_size         = "Standard_B2s"
+admin_username  = "azureuser"
+admin_password  = "Demopass@2026"
 
 # OS Disk
 os_disk_name                 = "osdisk-ubuntu-prod-01"
