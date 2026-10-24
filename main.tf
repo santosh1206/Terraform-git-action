@@ -75,20 +75,15 @@ resource "azurerm_network_interface_security_group_association" "nic_nsg_assoc" 
 
 # Ubuntu Linux Virtual Machine
 resource "azurerm_linux_virtual_machine" "vm" {
-  name                  = var.vm_name
-  location              = azurerm_resource_group.rg.location
-  resource_group_name   = azurerm_resource_group.rg.name
-  network_interface_ids = [azurerm_network_interface.nic.id]
-  size                  = var.vm_size
-  admin_username        = var.admin_username
-  admin_password        = var.admin_password
+  name                            = var.vm_name
+  location                        = azurerm_resource_group.rg.location
+  resource_group_name             = azurerm_resource_group.rg.name
+  network_interface_ids           = [azurerm_network_interface.nic.id]
+  size                            = var.vm_size
+  admin_username                  = var.admin_username
+  admin_password                  = var.admin_password
   disable_password_authentication = false
-  tags                  = var.tags
-
-  #admin_ssh_key {
-  #  username   = var.admin_username
-  #  public_key = var.admin_ssh_public_key
-  #}
+  tags                            = var.tags
 
   os_disk {
     name                 = var.os_disk_name
@@ -122,4 +117,6 @@ resource "azurerm_virtual_machine_data_disk_attachment" "disk_attach" {
   virtual_machine_id = azurerm_linux_virtual_machine.vm.id
   lun                = var.data_disk_lun
   caching            = var.data_disk_caching
+
+  depends_on = [azurerm_linux_virtual_machine.vm]
 }
