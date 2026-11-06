@@ -13,7 +13,7 @@ resource "azurerm_key_vault" "kv" {
   name = lookup(each.value, "name", "kv-${each.key}-default")
 
   # lookup(): if location is not specified in the map, fallback to resource group's location
-  location = lookup(each.value, "location", data.azurerm_resource_group.rg.location)
+  location = lookup(each.value, "location", azurerm_resource_group.rg.location)
 
   resource_group_name = azurerm_resource_group.rg.name
   tenant_id           = data.azurerm_client_config.current.tenant_id
