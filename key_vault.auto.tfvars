@@ -16,14 +16,14 @@ key_vaults = {
       network_default_action     = "Deny"
     }
     "app2" = {
-      name        = "kv-billing-prod-01"
+      name        = "kv-app-billing-prod-01"
       location    = "eastus2"
       environment = "production"
       # soft_delete_retention_days omitted -> will fallback via lookup/try
       # purge_protection_enabled omitted   -> will fallback via lookup/try
     }
     "app3" = {
-      name        = "kv-identity-prod-01"
+      name        = "kv-app-identity-prod-01"
       environment = "staging"
       # location omitted -> will fallback to RG location via lookup
     }
