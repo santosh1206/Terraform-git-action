@@ -55,3 +55,24 @@ resource "azurerm_role_assignment" "kv_admin" {
   role_definition_name = "Key Vault Administrator"
   principal_id         = data.azurerm_client_config.current.object_id
 }
+
+/*
+# Standard Software-Protected Cryptographic Key
+resource "azurerm_key_vault_key" "app_key" {
+  for_each = azurerm_key_vault.kv
+
+  name         = "data-encryption-key"
+  key_vault_id = each.value.id
+  key_type     = "RSA"
+  key_size     = 2048
+
+  key_opts = [
+    "decrypt",
+    "encrypt",
+    "sign",
+    "unwrapKey",
+    "verify",
+    "wrapKey"
+  ]
+} 
+*/
